@@ -45,10 +45,9 @@ The plugin is installed at user scope and applies to all Claude Code projects.
 ```
 
 This creates:
-- `claude-progress.txt` - Progress log
-- `claude-features.json` - Feature checklist
 - `.claude/.claude-harness-initialized` - Marker file
-- Optionally: `init.sh` - Startup script
+- `.claude/claude-harness.json` - FIC configuration
+- `.claude/fic-artifacts/` - Artifact storage directories
 
 ### Check Status
 
@@ -56,32 +55,23 @@ This creates:
 /ultraharness:status
 ```
 
-Shows git status, recent progress, and feature summary.
+Shows FIC phase, research confidence, plan validation status, and git state.
 
-### Manage Features
-
-```
-/ultraharness:feature add [name] - [description]
-/ultraharness:feature start [id]
-/ultraharness:feature pass [id]
-/ultraharness:feature list
-/ultraharness:feature next
-```
-
-### Log Progress
+### Configure FIC Mode
 
 ```
-/ultraharness:log started [task]
-/ultraharness:log completed [task]
-/ultraharness:log blocker [issue]
-/ultraharness:log note [observation]
+/ultraharness:configure strict    # Block operations until gates pass
+/ultraharness:configure relaxed   # Allow all operations (override gates)
+/ultraharness:configure standard  # Warn but don't block
 ```
 
-### Create Checkpoints
+### Run Baseline Tests
 
 ```
-/ultraharness:checkpoint [message]
+/ultraharness:baseline
 ```
+
+Manually run tests to verify implementation.
 
 ## How It Works
 
@@ -294,9 +284,6 @@ ultraharness/
 ├── commands/
 │   ├── init.md
 │   ├── status.md
-│   ├── log.md
-│   ├── feature.md
-│   ├── checkpoint.md
 │   ├── configure.md
 │   └── baseline.md
 ├── core/
