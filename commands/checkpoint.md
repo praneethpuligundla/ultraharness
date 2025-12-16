@@ -39,7 +39,7 @@ Format: `[checkpoint] {message}`
 
 ## Example
 
-User: `/harness:checkpoint Implemented user login form and validation`
+User: `/ultraharness:checkpoint Implemented user login form and validation`
 
 Actions:
 1. `git status` - check changes

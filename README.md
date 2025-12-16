@@ -276,7 +276,7 @@ project/
 ## Plugin Structure
 
 ```
-harness/
+ultraharness/
 ├── .claude-plugin/
 │   └── plugin.json
 ├── hooks/
@@ -300,7 +300,7 @@ harness/
 │   ├── configure.md
 │   └── baseline.md
 ├── skills/
-│   └── harness-workflow.md
+│   └── ultraharness-workflow.md
 ├── core/
 │   ├── config.py            # Configuration with FIC settings
 │   ├── progress.py

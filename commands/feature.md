@@ -48,27 +48,27 @@ $ARGUMENTS
 
 ### Add Feature
 ```
-/harness:feature add User authentication - Login and session management
+/ultraharness:feature add User authentication - Login and session management
 ```
 Creates new feature with status "failing" and next available ID.
 
 ### Update Status
 ```
-/harness:feature pass 1
-/harness:feature pass "User authentication"
-/harness:feature start 2
-/harness:feature fail 3
+/ultraharness:feature pass 1
+/ultraharness:feature pass "User authentication"
+/ultraharness:feature start 2
+/ultraharness:feature fail 3
 ```
 
 ### List Features
 ```
-/harness:feature list
+/ultraharness:feature list
 ```
 Shows all features grouped by status.
 
 ### Import Features
 ```
-/harness:feature import
+/ultraharness:feature import
 ```
 Then prompt user for a list of features (one per line or JSON format).
 

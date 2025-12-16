@@ -86,7 +86,7 @@ At session start:
 | standard | Yes | Suggest | Warn | Warn |
 | strict | Yes | Suggest | Block | Block |
 
-Configure with `/harness:configure <level>`
+Configure with `/ultraharness:configure <level>`
 
 ## Session Startup Routine
 
@@ -102,8 +102,8 @@ At the start of each session, the harness automatically:
 
 ### Before Starting a Feature
 ```
-/harness:feature start [feature-id]
-/harness:log started [feature-name]
+/ultraharness:feature start [feature-id]
+/ultraharness:log started [feature-name]
 ```
 
 ### While Working
@@ -111,27 +111,27 @@ At the start of each session, the harness automatically:
 - Test frequently
 - Create checkpoints for significant progress:
 ```
-/harness:checkpoint [description of progress]
+/ultraharness:checkpoint [description of progress]
 ```
 
 ### After Completing a Feature
 ```
-/harness:feature pass [feature-id]
-/harness:log completed [feature-name]
-/harness:checkpoint [final implementation description]
+/ultraharness:feature pass [feature-id]
+/ultraharness:log completed [feature-name]
+/ultraharness:checkpoint [final implementation description]
 ```
 
 ## Commands Reference
 
 | Command | Description |
 |---------|-------------|
-| `/harness:init` | Initialize harness for project |
-| `/harness:status` | Show current status |
-| `/harness:log [type] [message]` | Add progress entry |
-| `/harness:feature [action] [args]` | Manage features |
-| `/harness:checkpoint [message]` | Create git checkpoint |
-| `/harness:configure [setting]` | Configure automation |
-| `/harness:baseline` | Run baseline tests manually |
+| `/ultraharness:init` | Initialize harness for project |
+| `/ultraharness:status` | Show current status |
+| `/ultraharness:log [type] [message]` | Add progress entry |
+| `/ultraharness:feature [action] [args]` | Manage features |
+| `/ultraharness:checkpoint [message]` | Create git checkpoint |
+| `/ultraharness:configure [setting]` | Configure automation |
+| `/ultraharness:baseline` | Run baseline tests manually |
 
 ## Progress Log Entry Types
 
@@ -151,7 +151,7 @@ At the start of each session, the harness automatically:
 
 For UI features, enable browser automation:
 ```
-/harness:configure browser on
+/ultraharness:configure browser on
 ```
 
 Requires Playwright or Puppeteer:
@@ -204,23 +204,23 @@ Stored in `.claude/claude-harness.json`:
 
 ```
 # Session 1 - Initialize
-/harness:init
+/ultraharness:init
 # Add features...
-/harness:feature add User login - Email/password authentication
-/harness:feature add User registration - Sign up with email verification
-/harness:feature start 1
-/harness:log started User login implementation
+/ultraharness:feature add User login - Email/password authentication
+/ultraharness:feature add User registration - Sign up with email verification
+/ultraharness:feature start 1
+/ultraharness:log started User login implementation
 # ... work on feature ...
-/harness:checkpoint Implemented login form and basic validation
+/ultraharness:checkpoint Implemented login form and basic validation
 # ... more work ...
-/harness:feature pass 1
-/harness:log completed User login with tests passing
-/harness:checkpoint Completed user login feature
+/ultraharness:feature pass 1
+/ultraharness:log completed User login with tests passing
+/ultraharness:checkpoint Completed user login feature
 
 # Session 2 (context injected automatically)
-/harness:status
+/ultraharness:status
 # Shows: Login complete, registration next
-/harness:feature start 2
+/ultraharness:feature start 2
 # ... continue working ...
 ```
 
@@ -234,8 +234,8 @@ Stored in `.claude/claude-harness.json`:
 ### Tests Not Detected
 - Ensure standard test commands are used
 - Check `test_commands` in configuration
-- Run `/harness:baseline` manually to verify
+- Run `/ultraharness:baseline` manually to verify
 
 ### Feature Enforcement Too Strict
-- Switch to relaxed mode: `/harness:configure relaxed`
-- Or disable feature enforcement: `/harness:configure feature-enforcement off`
+- Switch to relaxed mode: `/ultraharness:configure relaxed`
+- Or disable feature enforcement: `/ultraharness:configure feature-enforcement off`

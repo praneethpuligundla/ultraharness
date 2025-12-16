@@ -49,9 +49,9 @@ You are initializing the agent harness for this project. This sets up the infras
    - Commit with message "Initialize agent harness for long-running workflows"
 
 5. Explain next steps:
-   - How to use `/harness:status` to see current state
-   - How to use `/harness:feature` to manage features
-   - How to use `/harness:log` to add progress entries
+   - How to use `/ultraharness:status` to see current state
+   - How to use `/ultraharness:feature` to manage features
+   - How to use `/ultraharness:log` to add progress entries
    - Remind them to commit checkpoints frequently
 
 ## File Templates

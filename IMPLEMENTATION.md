@@ -37,7 +37,7 @@ harness/
 │   ├── configure.md             # Configure settings
 │   └── baseline.md              # Run baseline tests
 ├── skills/
-│   └── harness-workflow.md      # Workflow guidance skill
+│   └── ultraharness-workflow.md      # Workflow guidance skill
 ├── README.md                    # User documentation
 └── IMPLEMENTATION.md            # This file
 ```
@@ -48,7 +48,7 @@ harness/
 
 | Recommendation | Implementation | File(s) |
 |----------------|----------------|---------|
-| Two-agent system | Skill guidance + init command separation | `skills/harness-workflow.md` |
+| Two-agent system | Skill guidance + init command separation | `skills/ultraharness-workflow.md` |
 | Init script execution | Auto-runs `init.sh` on session start | `hooks/session_start.py` |
 | Progress documentation | `claude-progress.txt` with auto-logging | `core/progress.py`, `hooks/post_tool_use.py` |
 | Feature list (JSON) | `claude-features.json` with status tracking | `core/features.py` |
@@ -300,13 +300,13 @@ Next priority items:
 
 | Command | Description | Key Actions |
 |---------|-------------|-------------|
-| `/harness:init` | Initialize harness | Create progress file, features file, marker |
-| `/harness:status` | Show current state | Display git, progress, features summary |
-| `/harness:log [type] [msg]` | Add progress entry | Append to progress file with timestamp |
-| `/harness:feature [action]` | Manage features | add, start, pass, fail, list, next |
-| `/harness:checkpoint [msg]` | Create git commit | Stage all, commit with prefix, log |
-| `/harness:configure [setting]` | Change settings | Modify `.claude/claude-harness.json` |
-| `/harness:baseline` | Run tests manually | Execute and display test results |
+| `/ultraharness:init` | Initialize harness | Create progress file, features file, marker |
+| `/ultraharness:status` | Show current state | Display git, progress, features summary |
+| `/ultraharness:log [type] [msg]` | Add progress entry | Append to progress file with timestamp |
+| `/ultraharness:feature [action]` | Manage features | add, start, pass, fail, list, next |
+| `/ultraharness:checkpoint [msg]` | Create git commit | Stage all, commit with prefix, log |
+| `/ultraharness:configure [setting]` | Change settings | Modify `.claude/claude-harness.json` |
+| `/ultraharness:baseline` | Run tests manually | Execute and display test results |
 
 ---
 

@@ -10,7 +10,7 @@ Display the current state of the agent harness for this project.
 
 1. **Harness Initialization Status**
    - Check if `.claude/.claude-harness-initialized` exists
-   - If not initialized, suggest running `/harness:init`
+   - If not initialized, suggest running `/ultraharness:init`
 
 2. **Git Status**
    - Current branch

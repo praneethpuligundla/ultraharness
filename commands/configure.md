@@ -34,12 +34,12 @@ $ARGUMENTS
 ## Examples
 
 ```
-/harness:configure strict
-/harness:configure relaxed
-/harness:configure standard
-/harness:configure auto-log off
-/harness:configure feature-enforcement off
-/harness:configure checkpoint-interval 60
+/ultraharness:configure strict
+/ultraharness:configure relaxed
+/ultraharness:configure standard
+/ultraharness:configure auto-log off
+/ultraharness:configure feature-enforcement off
+/ultraharness:configure checkpoint-interval 60
 ```
 
 ## Actions

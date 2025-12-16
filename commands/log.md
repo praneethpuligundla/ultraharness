@@ -36,11 +36,11 @@ $ARGUMENTS
 
 ## Examples
 
-User: `/harness:log completed User authentication`
+User: `/ultraharness:log completed User authentication`
 → Appends: `[2024-01-15 10:30:00] COMPLETED: User authentication`
 
-User: `/harness:log blocker API rate limiting issue`
+User: `/ultraharness:log blocker API rate limiting issue`
 → Appends: `[2024-01-15 10:30:00] BLOCKER: API rate limiting issue`
 
-User: `/harness:log note Consider refactoring the auth module`
+User: `/ultraharness:log note Consider refactoring the auth module`
 → Appends: `[2024-01-15 10:30:00] NOTE: Consider refactoring the auth module`
