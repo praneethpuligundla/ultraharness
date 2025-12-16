@@ -299,8 +299,6 @@ ultraharness/
 │   ├── checkpoint.md
 │   ├── configure.md
 │   └── baseline.md
-├── skills/
-│   └── ultraharness-workflow.md
 ├── core/
 │   ├── config.py            # Configuration with FIC settings
 │   ├── progress.py
