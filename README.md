@@ -36,6 +36,17 @@ claude plugins:add https://github.com/praneethpuligundla/ultraharness
 
 The plugin is installed at user scope and applies to all Claude Code projects.
 
+### Upgrading from Harness
+
+If you're using the lightweight [harness](https://github.com/praneethpuligundla/harness) plugin:
+
+```bash
+claude plugins:remove harness
+claude plugins:add praneethpuligundla/ultraharness
+```
+
+Then run `/ultraharness:init` in your project. Existing `claude-progress.txt` and `claude-features.json` files are preserved - UltraHarness adds FIC artifacts alongside them.
+
 ## Usage
 
 ### Initialize a Project
