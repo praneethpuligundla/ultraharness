@@ -1,0 +1,17 @@
+{
+  "name": "ultraharness",
+  "version": "1.0.0",
+  "description": "Advanced agent harness with FIC (Flow-Information-Context) system for intelligent context management, verification gates, and subagent orchestration",
+  "author": {
+    "name": "Praneeth Puligundla"
+  },
+  "repository": "https://github.com/praneethpuligundla/ultraharness",
+  "keywords": [
+    "fic-system",
+    "context-management",
+    "verification-gates",
+    "subagent-orchestration",
+    "long-running-agents",
+    "artifact-workflow"
+  ]
+}
